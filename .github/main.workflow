@@ -1,12 +1,12 @@
-workflow "build+push" {
+workflow "build push" {
   on = "push"
-  resolves = ["Build"]
+  resolves = [
+    "Build",
+    "GitHub Action for Docker",
+  ]
 }
 
-action "Build" {
-  uses = "docker://docker:stable"
-  args = "build -t $GITHUB_REPOSITORY ."
-  env = {
-    GITHUB_REPOSITORY = "fo"
-  }
+action "GitHub Action for Docker" {
+  uses = "actions/docker/cli@8cdf801b322af5f369e00d85e9cf3a7122f49108"
+  args = "build -t built ."
 }
