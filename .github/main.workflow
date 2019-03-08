@@ -5,5 +5,5 @@ workflow "build+push" {
 
 action "Build" {
   uses = "docker://docker:stable"
-  args = ["build", "-t", "$GITHUB_REPOSITORY", "."]
+  args = "build -t $GITHUB_REPOSITORY ."
 }
