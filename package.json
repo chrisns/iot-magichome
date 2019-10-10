@@ -19,7 +19,7 @@
   "homepage": "https://github.com/chrisns/iot-magichome#readme",
   "dependencies": {
     "aws-iot-device-sdk": "^2.2.1",
-    "aws-sdk": "^2.387.0",
+    "aws-sdk": "^2.546.0",
     "lodash.isequal": "^4.5.0",
     "magic-home": "^1.4.0"
   }
