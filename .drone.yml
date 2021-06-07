@@ -1,9 +1,0 @@
-pipeline:
-
-  docker:
-    image: plugins/docker
-    repo: chrisns/iot-magichome
-    tags:
-      - latest
-      - ${DRONE_BUILD_NUMBER}
-    secrets: [ docker_username, docker_password ]
